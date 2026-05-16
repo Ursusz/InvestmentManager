@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Balance Chart</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <p class="kicker">Savings Account</p>
+          <h1>Balance Chart</h1>
+        </div>
+        <div>
+          <button id="backButton" class="statement-button" type="button">Back</button>
+          <button id="refreshChartButton" class="statement-button" type="button">Refresh</button>
+        </div>
+      </header>
+
+      <section class="metrics chart-metrics" aria-label="Monthly report totals">
+        <article>
+          <span>Total Invested</span>
+          <strong id="totalInvestment">0.00</strong>
+        </article>
+        <article>
+          <span>Current Balance</span>
+          <strong id="currentBalance">0.00</strong>
+        </article>
+        <article>
+          <span>Net Profit</span>
+          <strong id="netProfit">0.00</strong>
+        </article>
+        <article>
+          <span>Profit</span>
+          <strong id="profitPercentage">0.00%</strong>
+        </article>
+      </section>
+
+      <section class="panel chart-panel">
+        <div class="panel-title">
+          <h2>Monthly Account Balance</h2>
+          <span id="chartStatus" class="count">Loading</span>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="balanceChart" width="1100" height="520"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="chart.js"></script>
+  </body>
+</html>
